@@ -1,0 +1,22 @@
+
+<!-- estrutura utilizada para vincular a inserção e o envio informação. -->
+
+
+<main>
+    <form #userform="ngForm" (ngSubmit)="receberDados()">
+        <div class="campo-label">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Ex.: email@email.com" [(ngModel)]="userModel.email">
+        </div>
+        <div class="campo-label">
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" placeholder="Sua senha aqui" [(ngModel)]="userModel.password">
+        </div>
+        
+        <button>Fazer Login</button>
+    </form>
+</main>
+
+
+
+<router-outlet></router-outlet>
